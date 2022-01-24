@@ -42,7 +42,8 @@ set number "shows number of current line
 set relativenumber "lines numbers are relative to current line
 set colorcolumn=80
 "line wrapping settings
-set wrap
+set nowrap
+set sidescroll=1
 set linebreak
 set textwidth=80
 " centers the screen on the cursor
@@ -83,8 +84,8 @@ noremap <Leader>q :q<CR>
 noremap <Leader>e :q!<CR>
 noremap <S-j> 3<C-E>
 noremap <S-k> 3<C-Y>
-noremap <S-u> 8<C-E>
-noremap <S-i> 8<C-Y>
+noremap <S-u> 3zh
+noremap <S-i> 3zl>
 noremap <Leader>cc :set concealcursor=<CR>
 noremap <Leader>pi :PlugInstall<CR>
 noremap <Leader>pc :PlugClean<CR>
@@ -142,6 +143,8 @@ Plug 'benmills/vimux'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'yggdroot/indentline'
+
+Plug 'arithran/vim-delete-hidden-buffers'
 
 " Call ends here plugins are not visible to vim after here
 call plug#end()
